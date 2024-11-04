@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #002D62;
+    padding: 20px;
+}
+
+#form-area h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+#form-area .Info {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+#infoQue{
+    font-size: 0.80rem;
+    margin-bottom: 2.5rem;
+    color: white;
+}
+#infoQue h3{
+    margin: 10px 0;
+    
+}
+
+#photo{
+    border: none;
+}
+#form-area { 
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    display: inline-block;
+    text-align: left;
+    max-width: 80%;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(270, 302, 255, 0.712)
+}
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 2px solid ;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.buttons{
+    display: flex;
+}
+.btn {
+    margin: 35px 2px;    
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #0099FF;
+    color: #000000;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0e6a7a;
+}
+
+
+
+#resumePreview {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#left {
+    background-color: #333;
+    padding: 40px;
+    flex: 0.3;
+    min-height: 100vh;
+    color: white;
+}
+@media (max-width:480px) {
+    #resumePreview {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        justify-content: center;
+        align-items: stretch;
+        gap: 0;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+#right {
+    padding: 40px;
+    flex: 1;
+    min-height: 100vh;
+}
+
+#preview-about-me{ 
+    font-size: 15px;
+    color: #0099FF;
+    text-align: center;
+}
+
+
+#phone, #email, #preview-skills {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+
+#btn{
+    border: none;
+    padding: 10px 20px;
+    background-color: rgb(0, 153, 255);
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    transition: ease-in-out 0.2s;
+}
+
+.right-preview h2 {
+    text-shadow: 1px 1px 1px black;
+    font-family: cursive;
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(0, 153, 255);
+    text-align: center;
+}
+.right-preview h3 {
+    border: none;
+    padding: 10px 20px;
+    background-color: rgb(0, 153, 255);
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    transition: ease-in-out 0.2s;
+}
+
+#preview-picture{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    align-items: center;
+}

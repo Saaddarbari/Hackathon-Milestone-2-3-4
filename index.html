@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dynamic-Resume-Builder</title>
+</head>
+<body>
+    <div id="form-area">
+        <h1>Resume Builder</h1>
+
+        <h2 class="Info">Personal Information</h2>
+        <div id="infoQue">
+            <h3>upload you photo:</h3>
+            <input type="file" id="photo" accept="/image*">
+            <h3>About me</h3>
+            <textarea name="aboutme" id="aboutme" cols="30" rows="1"></textarea>
+            <h3>Enter your Email:</h3>
+            <input type="email" id="email" placeholder="Enter email">
+            <h3>Enter your Phone No:</h3>
+            <input type="tel" id="phone" placeholder="Phone No">
+            <h3>Enter your Address:</h3>
+            <input type="text" id="address" placeholder="Address">
+        </div>
+        <h2 class="Info">Education</h2>
+        <div id="infoQue">
+            <h3>Enter your Name:</h3> 
+            <input type="text" id="name" placeholder="Enter Name">  
+            <h3>Enter your institute:</h3>
+            <input type="text" id="school" placeholder="Education">
+            <h3>Enter your degree:</h3>
+            <input type="text" id="degree" placeholder="e.g. Matriculation">
+        </div>
+
+        <h2 class="Info">Experience</h2>
+        <div id="infoQue">
+            <h3>Enter your company:</h3>
+            <input type="text" id="company" placeholder="company Name">
+            <h3>enter your role:</h3>
+            <input type="text" id="role" placeholder="e.g. Software Dev">
+        </div>
+
+        <h2 class="Info">Skills</h2>
+        <div id="infoQue">
+        <h3>Enter your skills:</h3>
+        <input type="text" id="skills" placeholder="Skills">
+        </div>
+        
+        <h2 class="Info">Projects</h2>
+        <div id="infoQue">
+        <h3>Enter your projects:</h3>
+        <input type="text" id="projects" placeholder="Enter projects"> 
+        </div>
+        <div class="buttons">
+        <button id="generateResume" class="btn">Generate</button>
+        <button id="submitButton" class="btn"><a id="share-link" href="#" target="_blank" class="btn">Shareable Link</a></button>
+        </div>
+         <!-- Generated Resume Preview -->
+   <div id="resumePreview" class="resume-preview" style="display: none;">
+    <div class="left-preview" id="left">
+        <img id="preview-picture" src="" alt="Profile Picture">
+        <h3 id="preview-about-me"></h3>
+        <p id="preview-phone"></p>
+        <p id="preview-email"></p>
+        <p id="preview-address"></p>
+    </div>
+    <div class="right-preview" id="right">
+    </div>
+     </div>
+</div>
+</body>
+<script src="main.js"></script>
+</body>
+</html>
