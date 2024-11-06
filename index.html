@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Dynamic-Resume-Builder</title>
 </head>
 <body>
     <div id="form-area">
+        <div class="form-content">
         <h1>Resume Builder</h1>
 
         <h2 class="Info">Personal Information</h2>
@@ -22,29 +24,32 @@
             <input type="tel" id="phone" placeholder="Phone No">
             <h3>Enter your Address:</h3>
             <input type="text" id="address" placeholder="Address">
+            <h3>language</h3>
+            <textarea name="language" id="language" cols="30" rows="1" placeholder="enter language use ,to show nextline e.g Eng,urdu"></textarea>
         </div>
         <h2 class="Info">Education</h2>
         <div id="infoQue">
             <h3>Enter your Name:</h3> 
             <input type="text" id="name" placeholder="Enter Name">  
-            <h3>Enter your institute:</h3>
-            <input type="text" id="school" placeholder="Education">
-            <h3>Enter your degree:</h3>
-            <input type="text" id="degree" placeholder="e.g. Matriculation">
+            <h3>enter your role:</h3>
+            <input type="text" id="role" placeholder="e.g. Software Dev">
+            <h3>Enter your Education:</h3>
+            <textarea name="education" id="education" cols="30" rows="5" placeholder="Enter Education"></textarea>
         </div>
 
         <h2 class="Info">Experience</h2>
         <div id="infoQue">
-            <h3>Enter your company:</h3>
-            <input type="text" id="company" placeholder="company Name">
-            <h3>enter your role:</h3>
-            <input type="text" id="role" placeholder="e.g. Software Dev">
+            <h3>Enter your Experience:</h3>
+            
+            <textarea name="experience" id="experience" cols="30" rows="5" placeholder="Enter Experience"></textarea>
+
+            
         </div>
 
         <h2 class="Info">Skills</h2>
         <div id="infoQue">
-        <h3>Enter your skills:</h3>
-        <input type="text" id="skills" placeholder="Skills">
+            <h3>Enter your skills:</h3>
+            <textarea name="skills" id="skills" cols="30" rows="1" placeholder="enter skill use ,to show nextline e.g html,css"></textarea>
         </div>
         
         <h2 class="Info">Projects</h2>
@@ -56,6 +61,7 @@
         <button id="generateResume" class="btn">Generate</button>
         <button id="submitButton" class="btn"><a id="share-link" href="#" target="_blank" class="btn">Shareable Link</a></button>
         </div>
+    </div>
          <!-- Generated Resume Preview -->
    <div id="resumePreview" class="resume-preview" style="display: none;">
     <div class="left-preview" id="left">
@@ -64,6 +70,7 @@
         <p id="preview-phone"></p>
         <p id="preview-email"></p>
         <p id="preview-address"></p>
+        <p id="preview-language"></p>
     </div>
     <div class="right-preview" id="right">
     </div>
