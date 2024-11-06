@@ -1,8 +1,15 @@
-var _a;
+var _a, _b;
 (_a = document.getElementById("generateResume")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () {
-    var _a;
     // Get form data
+    var _a;
     var name = document.getElementById("name").value.trim();
+    var Fathername = document.getElementById("Fathername").value.trim();
+    var dOb = document.getElementById("dOb").value.trim();
+    var CNIC = document.getElementById("CNIC").value.trim();
+    var domicile = document.getElementById("domicile").value.trim();
+    var martial = document.getElementById("martial").value.trim();
+    var religion = document.getElementById("religion").value.trim();
+    var nationality = document.getElementById("nationality").value.trim();
     var aboutme = document.getElementById("aboutme").value.trim();
     var email = document.getElementById("email").value.trim();
     var phone = document.getElementById("phone").value.trim();
@@ -19,7 +26,7 @@ var _a;
         : "No language added";
     // Update the left preview section
     var leftPreview = document.querySelector(".left-preview");
-    leftPreview.innerHTML = "\n        <img id=\"preview-picture\" src=\"#\" alt=\"Profile Picture\" style=\"display: none;\" />\n        <h3>Contact</h3>\n        <hr>\n        <p><strong><i class=\"fa-solid fa-phone \"></i></strong> ".concat(phone || "Not Provided", "</p>\n        <p><strong><i class=\"fa-solid fa-envelope\"></i></strong> ").concat(email || "Not Provided", "</p>\n        <p><strong><i class=\"fa-solid fa-location-dot\"></i></strong> ").concat(address || "Not Provided", "</p>\n        <h3>Education</h3>\n        <hr>\n        <pre><strong></strong> ").concat(education || "Not Provided", "</pre>\n        <h3>Language</h3>\n        <hr>\n        <p><strong></strong> ").concat(languageListHTML || "Not Provided", "</p>\n        <h3>Projects</h3>\n        <hr>\n        <p>").concat(projects || "No projects listed", "</p>\n    ");
+    leftPreview.innerHTML = "\n        <img id=\"preview-picture\" src=\"#\" alt=\"Profile Picture\" style=\"display: none;\" />\n        <h3>Information</h3>\n        <hr>\n        <p><strong>FatherName:</strong> ".concat(Fathername || "Not Provided", "</p>\n        <p><strong>DateOFBirth:</strong> ").concat(dOb || "Not Provided", "</p>\n        <p><strong>CNIC:</strong> ").concat(CNIC || "Not Provided", "</p>\n        <p><strong>Domicile:</strong> ").concat(domicile || "Not Provided", "</p>\n        <p><strong>Martial Status:</strong> ").concat(martial || "Not Provided", "</p>\n        <p><strong>Religion:</strong> ").concat(religion || "Not Provided", "</p>\n        <p><strong>Nationality:</strong> ").concat(nationality || "Not Provided", "</p>\n        <h3>Contact</h3>\n        <hr>\n        <p><strong><i class=\"fa-solid fa-phone \"></i></strong> ").concat(phone || "Not Provided", "</p>\n        <p><strong><i class=\"fa-solid fa-envelope\"></i></strong> ").concat(email || "Not Provided", "</p>\n        <p><strong><i class=\"fa-solid fa-location-dot\"></i></strong> ").concat(address || "Not Provided", "</p>\n        <h3>Education</h3>\n        <hr>\n        <pre><strong></strong> ").concat(education || "Not Provided", "</pre>\n        <h3>Language</h3>\n        <hr>\n        <p><strong></strong> ").concat(languageListHTML || "Not Provided", "</p>\n        <h3>Projects</h3>\n        <hr>\n        <p>").concat(projects || "No projects listed", "</p>\n    ");
     // Handle profile picture
     var profilePicInput = document.getElementById("photo");
     var previewPic = document.getElementById("preview-picture");
@@ -48,4 +55,22 @@ var _a;
     // Display the resume preview
     var resumePreview = document.getElementById("resumePreview");
     resumePreview.style.display = "flex";
+});
+(_b = document.getElementById("downloadResume")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", function () {
+    var resumePreview = document.getElementById("resumePreview");
+    // Check if resume preview exists
+    if (!resumePreview) {
+        alert("Please generate the resume before downloading.");
+        return;
+    }
+    // Configure PDF options
+    var options = {
+        margin: 0.5,
+        filename: "".concat(document.getElementById("name").value || 'resume', ".pdf"),
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+    };
+    // Generate and save the PDF with 'html2pdf' bypassing strict typing
+    html2pdf().set(options).from(resumePreview).save();
 });
