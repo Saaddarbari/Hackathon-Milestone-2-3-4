@@ -101,7 +101,7 @@ input, textarea {
 #left {
     background-color: #163853;
     padding: 40px;
-    flex: 0.3;
+    flex: 0.5;
     min-height: 100vh;
     color: white;
 }
