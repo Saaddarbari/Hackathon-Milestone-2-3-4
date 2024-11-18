@@ -43,9 +43,6 @@ document.getElementById("generateResume")?.addEventListener("click", () => {
         <p><strong><i class="fa-solid fa-phone "></i></strong> ${phone || "Not Provided"}</p>
         <p><strong><i class="fa-solid fa-envelope"></i></strong> ${email || "Not Provided"}</p>
         <p><strong><i class="fa-solid fa-location-dot"></i></strong> ${address || "Not Provided"}</p>
-        <h3>Education</h3>
-        <hr>
-        <pre><strong></strong> ${education || "Not Provided"}</pre>
         <h3>Language</h3>
         <hr>
         <p><strong></strong> ${languageListHTML || "Not Provided"}</p>
@@ -96,6 +93,10 @@ document.getElementById("generateResume")?.addEventListener("click", () => {
         <hr>
         <pre><strong></strong> ${experience || "Not Provided"}</pre>
         
+        <h3>Education</h3>
+        <hr>
+        <pre><strong></strong> ${education || "Not Provided"}</pre>
+
         <h3>Skills</h3>
         <hr>
         <p>${skillsListHTML || "No skills added"}</p>
