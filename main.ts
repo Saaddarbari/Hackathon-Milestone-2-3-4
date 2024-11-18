@@ -18,7 +18,6 @@ document.getElementById("generateResume")?.addEventListener("click", () => {
     const experience = (document.getElementById("experience") as HTMLInputElement).value.trim();
     const role = (document.getElementById("role") as HTMLInputElement).value.trim();
     const skills = (document.getElementById("skills") as HTMLInputElement).value.trim();
-    const projects = (document.getElementById("projects") as HTMLInputElement).value.trim();
 
     const languageArray = language ? language.split(/,|\n/).map(language => language.trim()).filter(language => language) : [];
     const languageListHTML = languageArray.length > 0
@@ -46,9 +45,6 @@ document.getElementById("generateResume")?.addEventListener("click", () => {
         <h3>Language</h3>
         <hr>
         <p><strong></strong> ${languageListHTML || "Not Provided"}</p>
-        <h3>Projects</h3>
-        <hr>
-        <p>${projects || "No projects listed"}</p>
     `;
 
     // Handle profile picture
