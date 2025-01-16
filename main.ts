@@ -30,7 +30,7 @@ document.getElementById("generateResume")?.addEventListener("click", () => {
         <img id="preview-picture" src="#" alt="Profile Picture" style="display: none;" />
         <h3>Information</h3>
         <hr>
-        <p><strong>FatherName:</strong> ${Fathername || "Not Provided"}</p>
+        <p><strong>Father/HusbandName:</strong> ${Fathername || "Not Provided"}</p>
         <p><strong>DateOFBirth:</strong> ${dOb || "Not Provided"}</p>
         <p><strong>CNIC:</strong> ${CNIC || "Not Provided"}</p>
         <p><strong>Domicile:</strong> ${domicile || "Not Provided"}</p>
